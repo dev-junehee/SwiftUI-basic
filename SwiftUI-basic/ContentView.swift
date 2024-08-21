@@ -125,6 +125,62 @@ struct ContentView: View {
     
 }
 
+/**
+`Modifer`
+- 순서에 따라 뷰가 달라질 수 있는 것에 주의!
+- 우선순위도 존재한다.
+*/
+// struct ContentView: View {
+//     
+//
+//     var body: some View {
+//         /// 가로 스크롤뷰
+//         ScrollView(.horizontal) {
+//             HStack(spacing: 20) {
+//                 Text("안녕하세요")
+//                     .font(.largeTitle)
+//                     .foregroundStyle(.white)
+//                     .background(.pink)
+//                     .padding()
+//                 .border(.black, width: 3)
+//                 Text("안녕하세요")
+//                     .font(.largeTitle)
+//                     .foregroundStyle(.white)
+//                     .padding()
+//                     .border(.black, width: 3)
+//                     .background(.pink)
+//                 Text("안녕하세요")
+//                     .font(.largeTitle)
+//                     .foregroundStyle(.white)
+//                     .padding()
+//                     .border(.black, width: 3)
+//                     .background(.pink)
+//             }
+//         }
+//         .padding()
+//         .background(.gray)
+//         // Spacer()
+//         
+//         /// 스택 내부 요소 사이 간격 30으로 설정
+//         VStack(spacing: 30) {
+//             Image(systemName: "heart.fill")
+//             Image(systemName: "heart.fill")
+//                 .foregroundStyle(.brown)
+//             Image(systemName: "heart.fill")
+//             Text("V스택안에 들어있는 모든 요소의 foreground 변경")
+//         }
+//         .foregroundStyle(.green)
+//         
+//         VStack(spacing: 10) {
+//             Image(systemName: "star")
+//             Text("그렇다")
+//         }
+//         .padding()
+//         .background(.yellow)
+//     }   
+//     
+// }
+
 #Preview {
     ContentView()
 }
