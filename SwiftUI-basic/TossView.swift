@@ -18,9 +18,45 @@ import SwiftUI
     - padding, blur... 값이 누적된다.
     - font, foregroundStyle... 값이 대체된다.
     - background는 정확히 말하면 누적되는 것. 눈에 보이지 않아서 대체되어 보이지만, 적용은 되었으나 가장 뒷배경에 적용되기 때문에 보이지 않는 상태. (패딩을 추가하면 확인 가능)
+ 4) Custom Modifier
+    - `ViewModifier Protocol`
+    - 
  */
 struct TossView: View {
     var body: some View {
+        /**
+         
+                Text("안녕")
+                    .modifier(RadiusBlackBackground())      /// Custom Modifier
+                Button("확인") { }
+                    .modifier(RadiusBlackBackground())      /// modifier... 인스턴스... 계속 반복 >>> 줄일 수 없을까? >>> Apple "extension을 만들어"
+         
+         */
+        Text("안녕하슈")
+            .asRadiusBlackBackground()
+        Button("확인") { }
+            .asRadiusBlackBackground()
+        
+        Text("안녕하세요")
+            .font(.largeTitle)
+            .foregroundStyle(.white)
+            .padding()
+            .background(.green)
+            .clipShape(.capsule)
+        
+        Text("안녕하세요")
+            .font(.largeTitle)
+            .foregroundStyle(.white)
+            .padding()
+            .background(.cyan)
+            .clipShape(.capsule)
+        Button("로그인") { }
+            .font(.largeTitle)
+            .foregroundStyle(.white)
+            .padding()
+            .background(.cyan)
+            .clipShape(.capsule)
+        
         HStack {
             Text("안녕")
                 .padding()

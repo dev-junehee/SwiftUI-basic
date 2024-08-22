@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C40391532C76CB5F00D50850 /* TossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40391522C76CB5F00D50850 /* TossView.swift */; };
+		C40391562C76D94C00D50850 /* RadiusBlackBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40391552C76D94C00D50850 /* RadiusBlackBackground.swift */; };
 		C49447FC2C75703A005AADF7 /* SwiftUI_basicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49447FB2C75703A005AADF7 /* SwiftUI_basicApp.swift */; };
 		C49447FE2C75703A005AADF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49447FD2C75703A005AADF7 /* ContentView.swift */; };
 		C49448002C75703C005AADF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49447FF2C75703C005AADF7 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		C40391522C76CB5F00D50850 /* TossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossView.swift; sourceTree = "<group>"; };
+		C40391552C76D94C00D50850 /* RadiusBlackBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlackBackground.swift; sourceTree = "<group>"; };
 		C49447F82C75703A005AADF7 /* SwiftUI-basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-basic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49447FB2C75703A005AADF7 /* SwiftUI_basicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_basicApp.swift; sourceTree = "<group>"; };
 		C49447FD2C75703A005AADF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40391542C76D90D00D50850 /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				C40391552C76D94C00D50850 /* RadiusBlackBackground.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
 		C49447EF2C75703A005AADF7 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 		C49447FA2C75703A005AADF7 /* SwiftUI-basic */ = {
 			isa = PBXGroup;
 			children = (
+				C40391542C76D90D00D50850 /* CustomModifier */,
 				C49447FB2C75703A005AADF7 /* SwiftUI_basicApp.swift */,
 				C49447FD2C75703A005AADF7 /* ContentView.swift */,
 				C49447FF2C75703C005AADF7 /* Assets.xcassets */,
@@ -143,6 +154,7 @@
 				C49447FE2C75703A005AADF7 /* ContentView.swift in Sources */,
 				C49447FC2C75703A005AADF7 /* SwiftUI_basicApp.swift in Sources */,
 				C40391532C76CB5F00D50850 /* TossView.swift in Sources */,
+				C40391562C76D94C00D50850 /* RadiusBlackBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
