@@ -32,10 +32,35 @@ struct TossView: View {
                     .modifier(RadiusBlackBackground())      /// modifier... 인스턴스... 계속 반복 >>> 줄일 수 없을까? >>> Apple "extension을 만들어"
          
          */
-        Text("안녕하슈")
-            .asRadiusBlackBackground()
-        Button("확인") { }
-            .asRadiusBlackBackground()
+        
+        HStack {
+            Image(systemName: "bookmark")
+            Text("매일 포인트 받는 출석체크/퀴즈")
+                .font(.title3.bold())
+            Spacer()
+        }
+        .padding(.horizontal, 20)
+        .background(.yellow)
+        
+        HStack {
+            Image(systemName: "bookmark")
+            Text("매일 포인트 받는 출석체크/퀴즈")
+                .font(.title3.bold())
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, 20)
+        .background(.yellow)
+        
+        VStack(alignment: .leading) {
+         
+            Text("안녕하슈")
+                .asRadiusBlackBackground()
+            Text("반갑슈")
+                .asRadiusBlackBackground()
+            Button("확인") { }
+                .asRadiusBlackBackground()
+        }
+        
         
         Text("안녕하세요")
             .font(.largeTitle)
