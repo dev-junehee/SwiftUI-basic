@@ -64,7 +64,7 @@ struct SimpleCountView: View {
     var body: some View {
         countProperty
         methodProperty()
-        RenderingTestView()
+        RenderingTest()
         
         Text("Body In : \(number)")
             .font(.largeTitle)
@@ -91,7 +91,7 @@ struct SimpleCountView: View {
     SimpleCountView()
 }
 
-private struct RenderingTestView: View {
+private struct RenderingTest: View {
     
     /// 아무리 body가 다시 안 그려지더라도 init 구문에 어떤 코드를 작성하는지에 따라 달라질 수 있기 때문에 유의해야 한다.
     init() {
