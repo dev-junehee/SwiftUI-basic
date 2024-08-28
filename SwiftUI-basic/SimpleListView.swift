@@ -33,7 +33,7 @@ struct SimpleListView: View {
     
     
     var body: some View {
-        /// `id`: 유니크한 값을 판별하는 기준 (\.self, \.name, \.age... )
+        /// `id`: 유니크한 값을 판별하는 기준 `(\.self, \.name, \.age... )`
         VStack {
             ForEach(genre, id: \.id) { item in
                 Text("\(item.name) - \(item.count)")

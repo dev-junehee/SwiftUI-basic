@@ -10,11 +10,12 @@ import SwiftUI
 
 /// Extension에서만 활용하고 있기 때문에 외부에서 볼 수 없도록 private 처리
 private struct RadiusBlackBackground: ViewModifier {
+    let color: Color
     
     func body(content: Content) -> some View {
         content
             .font(.largeTitle)
-            .foregroundStyle(.white)
+            .asForeground(color)
             .padding()
             .background(.black)
             .clipShape(.capsule)
@@ -25,8 +26,8 @@ private struct RadiusBlackBackground: ViewModifier {
 extension View {
     
     /// `as`: 내가 만든 거라는 의미. WWDC에서도 이렇게 소개함!
-    func asRadiusBlackBackground() -> some View {
-        modifier(RadiusBlackBackground())
+    func asRadiusBlackBackground(color: Color) -> some View {
+        modifier(RadiusBlackBackground(color: color))
     }
     
 }

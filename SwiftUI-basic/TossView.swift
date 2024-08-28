@@ -54,11 +54,11 @@ struct TossView: View {
         VStack(alignment: .leading) {
          
             Text("안녕하슈")
-                .asRadiusBlackBackground()
+                .asRadiusBlackBackground(color: .green)
             Text("반갑슈")
-                .asRadiusBlackBackground()
+                .asRadiusBlackBackground(color: .green)
             Button("확인") { }
-                .asRadiusBlackBackground()
+                .asRadiusBlackBackground(color: .green)
         }
         
         

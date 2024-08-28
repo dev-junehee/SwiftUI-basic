@@ -12,11 +12,53 @@ import SwiftUI
  - 외부에서 Source of Truth를 주입 받고 참고 받는다
  - 상위 뷰가 가진 상태는 사용/수정할 수 있는 Derived Value
  */
+
+/**
+ `Button`, `Toggle` (_ titleKey, Action)
+ - 클릭 영역에 대한 조절이 잘 안 된다.
+ - 글자만 입려할 수 있는 점이 아쉽다.
+ 
+ `Button(action: label)`
+ - label 기능 자체가 버튼으로 동작되기 때문에 클릭 영역을 조절할 수 있다.
+ 
+ */
 struct CategoryView: View {
     /// `Source of Truth`
     @State private var genre = "로맨스"
+    @State private var isOn = false
     
     var body: some View {
+        /// 패딩 영역까지 액션이 발생하지 않음.
+        Button("확인") {
+            print("click!")
+        }
+        .padding(100)
+        .background(.red)
+
+        Toggle("스위치", isOn: $isOn)
+            .background(.yellow)
+        
+        /// 패딩 영역까지 액션이 가능
+        Button(action: {
+            print("버튼 클릭 했삼")
+        }, label: {
+            VStack {
+                Image(systemName: "heart")
+                Text("하트버튼")
+            }
+            .padding()
+            .background(.green)
+        })
+        
+        Toggle(isOn: $isOn, label: {
+            VStack {
+                Image(systemName: "star")
+                Text("토글토글")
+            }
+            .padding()
+            .background(.green)
+        })
+        
         CategoryPresentView(text: genre)
         Text("선택한 장르: \(genre)")
         CategoryButtonView(genre: $genre)    /// 하위 뷰
