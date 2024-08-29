@@ -31,6 +31,9 @@ struct SimpleListView: View {
         Genre(name: "로맨스", count: 4),
     ]
     
+    init() {
+        print("SimpleListView Init")
+    }
     
     var body: some View {
         /// `id`: 유니크한 값을 판별하는 기준 `(\.self, \.name, \.age... )`

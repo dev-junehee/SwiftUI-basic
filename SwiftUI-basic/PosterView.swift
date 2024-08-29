@@ -16,26 +16,30 @@ struct PosterView: View {
             case .empty:
                 /// 성공/실패도 아닌 로드하고 있는 상황
                 ProgressView()
+                    .frame(width: 200, height: 300)
             case .success(let image):
                 image
                     .resizable()
-                    .scaledToFill()
-                    .clipShape(.circle)
-            case .failure(let error):
+                    .frame(width: 200, height: 300)
+                    // .scaledToFit()
+                    // .clipShape(.circle)
+            case .failure(_):
                 Image(systemName: "heart.fill")
+                    .frame(width: 200, height: 300)
             @unknown default:
                 Image(systemName: "xmark")
+                    .frame(width: 200, height: 300)
             }
         }
             
         
-        Image(systemName: "heart.fill")
-            .resizable()
-            .frame(width: 50, height: 50)
-            .wrapToButton {
-                print("하트를 클릭")
-            }
-            .background(.pink)
+        // Image(systemName: "heart.fill")
+        //     .resizable()
+        //     .frame(width: 50, height: 50)
+        //     .wrapToButton {
+        //         print("하트를 클릭")
+        //     }
+        //     .background(.pink)
         
         
         

@@ -27,6 +27,10 @@ struct CategoryView: View {
     @State private var genre = "로맨스"
     @State private var isOn = false
     
+    init() {
+        print("CategoryView Init")
+    }
+    
     var body: some View {
         /// 패딩 영역까지 액션이 발생하지 않음.
         Button("확인") {
